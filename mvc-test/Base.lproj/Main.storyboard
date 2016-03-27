@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mvc_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fulll Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5n-6Z-qYo">
+                                <rect key="frame" x="180" y="135" width="265" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="A7d-Wu-hKz"/>
+                                    <constraint firstAttribute="width" constant="42" id="lKr-wv-yHq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lKr-wv-yHq"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="f5o-DU-vHe" customClass="RoundedImageView" customModule="mvc_test" customModuleProvider="target">
+                                <rect key="frame" x="180" y="199" width="265" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="C4h-k8-uZt"/>
+                                    <constraint firstAttribute="width" constant="265" id="gVK-a3-woW"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kqr-bg-ejs">
+                                <rect key="frame" x="180" y="402" width="265" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="Axv-uj-pKl"/>
+                                    <constraint firstAttribute="height" constant="30" id="tcc-RT-Oec"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Px7-D1-ysk">
+                                <rect key="frame" x="277" y="440" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="dwh-cM-LAv"/>
+                                    <constraint firstAttribute="height" constant="30" id="z9u-YB-wnL"/>
+                                </constraints>
+                                <state key="normal" title="Rename"/>
+                                <connections>
+                                    <action selector="renamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJ1-rj-C3X"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Px7-D1-ysk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Qr-Q0-IBJ"/>
+                            <constraint firstItem="Px7-D1-ysk" firstAttribute="top" secondItem="kqr-bg-ejs" secondAttribute="bottom" constant="8" id="8jh-EF-unB"/>
+                            <constraint firstItem="h5n-6Z-qYo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="115" id="C3N-gx-UdT"/>
+                            <constraint firstItem="kqr-bg-ejs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C7S-Zu-hfa"/>
+                            <constraint firstItem="h5n-6Z-qYo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PPG-8u-Q4R"/>
+                            <constraint firstItem="f5o-DU-vHe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f1d-Mm-Zjo"/>
+                            <constraint firstItem="kqr-bg-ejs" firstAttribute="top" secondItem="f5o-DU-vHe" secondAttribute="bottom" constant="38" id="lwb-xs-4eR"/>
+                            <constraint firstItem="f5o-DU-vHe" firstAttribute="top" secondItem="h5n-6Z-qYo" secondAttribute="bottom" constant="43" id="qND-Wg-DL7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fullName" destination="h5n-6Z-qYo" id="jJ0-KN-Yq5"/>
+                        <outlet property="renameField" destination="kqr-bg-ejs" id="SzO-Ik-79m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="462"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trees" width="1300" height="870"/>
+    </resources>
 </document>

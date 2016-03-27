@@ -12,6 +12,8 @@
 		9C04EE711CA7614F00680781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C04EE6F1CA7614F00680781 /* Main.storyboard */; };
 		9C04EE731CA7614F00680781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C04EE721CA7614F00680781 /* Assets.xcassets */; };
 		9C04EE761CA7614F00680781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C04EE741CA7614F00680781 /* LaunchScreen.storyboard */; };
+		9C04EE831CA7620900680781 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04EE821CA7620900680781 /* Person.swift */; };
+		9C04EE851CA765E100680781 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04EE841CA765E100680781 /* RoundedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9C04EE721CA7614F00680781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C04EE751CA7614F00680781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C04EE771CA7614F00680781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C04EE821CA7620900680781 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		9C04EE841CA765E100680781 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,56 @@
 		9C04EE6A1CA7614E00680781 /* mvc-test */ = {
 			isa = PBXGroup;
 			children = (
+				9C04EE811CA761DC00680781 /* Util */,
+				9C04EE801CA761D200680781 /* Resources */,
+				9C04EE7F1CA761CA00680781 /* Controller */,
+				9C04EE7E1CA761B100680781 /* Model */,
+				9C04EE7D1CA761A200680781 /* View */,
 				9C04EE6B1CA7614F00680781 /* AppDelegate.swift */,
-				9C04EE6D1CA7614F00680781 /* ViewController.swift */,
 				9C04EE6F1CA7614F00680781 /* Main.storyboard */,
 				9C04EE721CA7614F00680781 /* Assets.xcassets */,
 				9C04EE741CA7614F00680781 /* LaunchScreen.storyboard */,
 				9C04EE771CA7614F00680781 /* Info.plist */,
 			);
 			path = "mvc-test";
+			sourceTree = "<group>";
+		};
+		9C04EE7D1CA761A200680781 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C04EE841CA765E100680781 /* RoundedImageView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9C04EE7E1CA761B100680781 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C04EE821CA7620900680781 /* Person.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9C04EE7F1CA761CA00680781 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C04EE6D1CA7614F00680781 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9C04EE801CA761D200680781 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C04EE811CA761DC00680781 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +182,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C04EE851CA765E100680781 /* RoundedImageView.swift in Sources */,
+				9C04EE831CA7620900680781 /* Person.swift in Sources */,
 				9C04EE6E1CA7614F00680781 /* ViewController.swift in Sources */,
 				9C04EE6C1CA7614F00680781 /* AppDelegate.swift in Sources */,
 			);
@@ -252,10 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "mvc-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juniorsamaroo.mvc-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -263,10 +314,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "mvc-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.juniorsamaroo.mvc-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
